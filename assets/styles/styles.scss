@@ -5,7 +5,9 @@ $link-active: hsl(220, 98%, 61%);
 $check-bg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
 
 // Light theme colors
-
+$light: hsl(0, 0%, 98%);
+$main-bg: hsl(235, 19%, 35%);
+$filters: hsl(236, 9%, 61%);
 
 * {
   margin: 0;
@@ -15,8 +17,8 @@ $check-bg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
 
 // Box Shadows
 .shadow {
-  -webkit-box-shadow: 0px 0px 2px 0px #000000;
-  box-shadow: 0px 0px 2px 0px #000000;
+  -webkit-box-shadow: 0px 0px 25px 1px hsl(236, 9%, 61%);
+  box-shadow: 0px 0px 25px 1px hsl(236, 9%, 61%);
 }
 
 /*
@@ -27,6 +29,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 100%;
+  background-color: #f6f6f8;
 }
 
 .header {
@@ -37,23 +40,24 @@ body {
 
   &__title {
     letter-spacing: 0.7rem;
-    color: #fff;
+    color: $light;
   }
 }
 
 .form {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 90%;
+  background-color: $light;
+  border-radius: 0.4rem;
+  margin: 0 auto;
 
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
     padding: 0.75rem 1rem;
-    border-radius: 0.4rem;
-    width: 80%;
+    width: 100%;
 
     &__items {
       display: flex;
@@ -82,14 +86,18 @@ body {
   margin-right: 1rem;
 }
 
+/*
+  Items container
+*/
 .items {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 80%;
-  border-radius: 0.4rem;
+  width: 90%;
   margin: 1rem auto;
+  background-color: $light;
+  border-radius: 0.4rem;
 
   &__container {
     display: flex;
@@ -104,20 +112,33 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    padding: 1rem 0;
+
+    &__lefts {
+      margin-left: 1rem;
+    }
+
+    &__clear {
+      margin-right: 1rem;
+    }
   }
 }
 
-
+/*
+  Each individual todo styles
+*/
 .item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
-  padding: 0.75rem 1rem;
+  padding: 1.1rem 0;
   width: 100%;
 
   &__container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
 
     &__checked {}
 
@@ -130,5 +151,33 @@ body {
   button {
     border: none;
     background-color: transparent;
+    margin-right: 1rem;
+  }
+}
+
+/*
+  Filter Box
+*/
+.filterbox {
+  display: flex;
+  justify-content: center;
+  background-color: $light;
+  width: 90%;
+  margin: 1.5rem auto;
+  padding: 1rem 0;
+  border-radius: 0.4rem;
+
+  p {
+    font-weight: 700;
+    color: $filters;
+    cursor: pointer;
+  }
+
+  p.active {
+    color: $link-active;
+  }
+
+  > *:not(:last-child) {
+    margin-right: 1rem;
   }
 }
