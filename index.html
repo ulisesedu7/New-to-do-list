@@ -29,11 +29,11 @@
   </header>
 
   <main id="main">
-    <form class="form">
+    <form class="form" id="form">
       <div class="form__container shadow">
         <div class="form__container__items">
           <div class="form__container__circle items-circle check-holder"></div>
-          <input type="text" required id="todo-item" class="form__container__todo" placeholder="Create a new todo...">
+          <input type="text" id="todo-item" class="form__container__todo" placeholder="Create a new todo...">
         </div>
 
         <button type="submit"><i class="fa-solid fa-plus"></i></button>
@@ -42,14 +42,7 @@
 
     <section id="todo-cont" class="items shadow">
       <article id="todo-items" class="items__container">
-        <div class="item">
-          <div class="item__container">
-            <div id="check-holder" class="item__container__checked items-circle"></div>
-            <p class="item__container__item">This would be a todo item</p>
-          </div>
 
-          <button type="submit"><i class="fa-solid fa-plus"></i></button>
-        </div>
       </article>
 
       <div id="main-footer" class="items__footer">
