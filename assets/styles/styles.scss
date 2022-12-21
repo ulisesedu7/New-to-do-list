@@ -6,7 +6,7 @@ $check-bg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
 
 // Light theme colors
 $light: hsl(0, 0%, 98%);
-$main-bg: hsl(235, 19%, 35%);
+$todo-text: hsl(235, 19%, 35%);
 $filters: hsl(236, 9%, 61%);
 
 * {
@@ -42,6 +42,10 @@ body {
     letter-spacing: 0.7rem;
     color: $light;
   }
+}
+
+::placeholder {
+  font-size: 1rem;
 }
 
 .form {
@@ -113,6 +117,7 @@ body {
     justify-content: space-between;
     width: 100%;
     padding: 1rem 0;
+    color: $filters;
 
     &__lefts {
       margin-left: 1rem;
@@ -120,6 +125,15 @@ body {
 
     &__clear {
       margin-right: 1rem;
+      cursor: pointer;
+    }
+
+    &__clear:hover {
+      
+    }
+
+    &__clear:hover {
+
     }
   }
 }
@@ -131,8 +145,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.1rem 0;
+  padding: 1.45rem 0;
   width: 100%;
+  border-bottom: 1px solid #ddd;
 
   &__container {
     display: flex;
@@ -140,10 +155,13 @@ body {
     align-items: center;
     margin-left: 1rem;
 
-    &__checked {}
+    &__checked {
+      cursor: pointer;
+    }
 
     &__item {
       font-size: 1rem;
+      color: $todo-text;
     }
 
   }
@@ -153,6 +171,11 @@ body {
     background-color: transparent;
     margin-right: 1rem;
   }
+}
+
+.completed {
+  background: $check-bg;
+  background-image: url('../images/icon-check.svg');
 }
 
 /*
@@ -178,6 +201,15 @@ body {
   }
 
   > *:not(:last-child) {
-    margin-right: 1rem;
+    margin-right: 1.85rem;
   }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  color: $filters;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 3.75rem;
 }

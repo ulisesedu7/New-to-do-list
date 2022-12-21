@@ -34,6 +34,10 @@ body {
   color: hsl(0deg, 0%, 98%);
 }
 
+::placeholder {
+  font-size: 1rem;
+}
+
 .form {
   display: flex;
   justify-content: center;
@@ -98,14 +102,15 @@ body {
   justify-content: space-between;
   width: 100%;
   padding: 1rem 0;
+  color: hsl(236deg, 9%, 61%);
 }
 .items__footer__lefts {
   margin-left: 1rem;
 }
 .items__footer__clear {
   margin-right: 1rem;
+  cursor: pointer;
 }
-
 /*
   Each individual todo styles
 */
@@ -113,8 +118,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.1rem 0;
+  padding: 1.45rem 0;
   width: 100%;
+  border-bottom: 1px solid #ddd;
 }
 .item__container {
   display: flex;
@@ -122,13 +128,22 @@ body {
   align-items: center;
   margin-left: 1rem;
 }
+.item__container__checked {
+  cursor: pointer;
+}
 .item__container__item {
   font-size: 1rem;
+  color: hsl(235deg, 19%, 35%);
 }
 .item button {
   border: none;
   background-color: transparent;
   margin-right: 1rem;
+}
+
+.completed {
+  background: linear-gradient hsl(192deg, 100%, 67%) to hsl(280deg, 87%, 65%);
+  background-image: url("../images/icon-check.svg");
 }
 
 /*
@@ -152,7 +167,16 @@ body {
   color: hsl(220deg, 98%, 61%);
 }
 .filterbox > *:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: 1.85rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  color: hsl(236deg, 9%, 61%);
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 3.75rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
