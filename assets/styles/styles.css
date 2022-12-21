@@ -139,6 +139,7 @@ body {
   border: none;
   background-color: transparent;
   margin-right: 1rem;
+  cursor: pointer;
 }
 
 .completed {
