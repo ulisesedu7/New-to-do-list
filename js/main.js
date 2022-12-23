@@ -26,7 +26,7 @@ main.addEventListener('keypress', (e) => {
 
   // Validacion
   if(description == '') {
-    
+     // Vacia por ahora para luego llamar la funcion validadora
   }
 
   // Mandar los valores
